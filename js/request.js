@@ -1,6 +1,6 @@
 function getAllDatos() {
     $.ajax({
-        url: "http://localhost/APITecnicos-NoSQL/gastos",
+        url: "https://unfurbished-elissa-dcollet.ngrok-free.dev/APITecnicos-NoSQL/gastos",
         type: "GET",
         dataType: "json",
         success: function(datos) {
@@ -33,7 +33,7 @@ function deleteGasto() {
             }).then((result) => {
                 if (result.isConfirmed) {
                     console.log("Eliminando gasto con ID:", id);
-                    fetch(`http://localhost/APITecnicos-NoSQL/gastos?id=${id}`, {
+                    fetch(`https://unfurbished-elissa-dcollet.ngrok-free.dev/APITecnicos-NoSQL/gastos?id=${id}`, {
                         method: "DELETE"
                     })
                     .then(response => response.json())
